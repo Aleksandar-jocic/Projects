@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <h1>Movie Festival</h1>
+
+    <div class="container">
+        <h6>Please fill in this form</h6>
+        <h6>Movie</h6>
+        <div class="movie">
+
+            <div>
+
+                <label for="title">Title</label>
+                <br>
+                <input type="text" id="title" class="forwidth" placeholder="Title">
+                <br>
+
+                <label for="length">Length (min)</label>
+                <br>
+                <input type="number" id="length" class="forwidth" placeholder='Length in min'>
+                <br>
+                <select id="select">
+                    <option value="">--</option>
+                    <option value="Action">Action</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                </select>
+                <br>
+                <button id="addmovie">Create movie</button>
+                <br>
+
+                <div id="resdiv">
+
+                </div>
+            </div>
+
+        </div>
+        <h6>Program</h6>
+        <div class="program">
+            <lable for='datelbl'>Date</lable>
+            <br>
+            <input type="date" id="datelbl">
+            <br>
+            <button id="createprogram">Create program</button>
+            
+            <div id="progdiv">
+
+            </div>
+
+            <hr>
+
+            
+            <h6>Movie</h6>
+
+            <select id="movlistdiv">
+
+                    <option value="">--</option>
+            </select>
+            <h6>Program</h6>
+            <select id="proglistdiv">
+
+                    <option value="">--</option>
+
+            </select>
+
+            <button id="addMovieToProgram">Add Movie To Program</button>
+            
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./enitities.js"></script>
+    <script type="text/javascript" src="./form.js"></script>
+
+
+</body>
+
+</html>

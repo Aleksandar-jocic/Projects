@@ -1,0 +1,98 @@
+#secondsector {
+  text-align: center;
+  background-color: #18bc9c;
+  height: 450px;
+  width: 100%; }
+  #secondsector img {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    width: 230px; }
+  #secondsector h3 {
+    color: white; }
+  #secondsector h5 {
+    margin-bottom: 25px;
+    color: white; }
+
+#icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
+.container-fluid {
+  width: 100%;
+  padding: 0px; }
+
+.full {
+  background-color: #2c3e50; }
+
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  margin: 0px; }
+
+.navbar-light .navbar-brand {
+  color: white; }
+
+.navbar-light .navbar-toggler {
+  color: white;
+  background-color: #18bc9c; }
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: white; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white; }
+
+.row {
+  margin: 0px; }
+
+#portfoliosector {
+  margin-top: 25px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto; }
+  #portfoliosector img {
+    width: 100%;
+    margin-bottom: 15px; }
+
+h1 {
+  text-align: center;
+  margin-top: 25px; }
+
+#aboutsector {
+  width: 100%;
+  background-color: #18bc9c;
+  border: 0px; }
+  #aboutsector button {
+    width: 40%; }
+
+#contactsector {
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 10px;
+  width: 100%;
+  text-align: left; }
+  #contactsector form {
+    margin-left: 0px; }
+  #contactsector input {
+    border: 0px; }
+  #contactsector h1 {
+    text-align: center; }
+  #contactsector hr {
+    width: 93%; }
+  #contactsector #message {
+    margin-bottom: 140px; }
+
+#footer {
+  background-color: #2c3e50;
+  margin-top: 25px;
+  color: white;
+  text-align: center; }
+  #footer i {
+    margin: 0 10px 0 10px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%; }
+  #footer h4 {
+    margin-bottom: 15px;
+    margin-top: 15px; }
+
+/*# sourceMappingURL=bootstrapproject.css.map */
