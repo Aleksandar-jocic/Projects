@@ -5,10 +5,10 @@
 
 
 
-function Student(name, surname) {
+function Student(nameSurname) {
 
-    this.name = name;
-    this.surname = surname;
+    this.nameSurname = nameSurname;
+    // this.surname = surname;
 
 
 
@@ -16,8 +16,8 @@ function Student(name, surname) {
 
 Student.prototype.getStudentData = function () {
 
-    var fullName = this.name + " " + this.surname;
+    // var fullName = this.name + " " + this.surname;
 
 
-    return fullName;
+    return this.nameSurname;
 }

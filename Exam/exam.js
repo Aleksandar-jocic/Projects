@@ -8,27 +8,28 @@
 
 
 
-function Exam(subject, student, grade) {
+function Exam(grade) {
 
     this.grade = grade;
 
+
 }
 
-Exam.prototype.getExamInfo = function () {
+Exam.prototype.getGrade = function () {
 
-    var studentAndExam;
+    // var studentAndExam;
 
-    studentAndExam = Subject.getSubjectName() + " " + Student.getStudentData();
+    // studentAndExam = Subject.getSubjectName() + " " + Student.getStudentData();
+
+    return this.grade
 }
 
 Exam.prototype.hasPassed = function () {
 
-    var passedOrFailed;
+    var passedOrFailed = false;
 
     if (this.grade > 5) {
         passedOrFailed = true;
-    } else {
-        passedOrFailed = false;
-    }
+    } 
     return passedOrFailed
 }
