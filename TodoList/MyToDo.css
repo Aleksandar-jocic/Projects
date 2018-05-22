@@ -1,0 +1,36 @@
+body {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.stdiv {
+    background-color: maroon;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+}
+ul:nth-child(odd) {
+    background-color: #CCC;
+}
+ul:nth-child(even) {
+    background-color: #FFF;
+}
+li {
+    list-style-type: none;
+    position: relative;
+    padding: 5px;
+    
+}
+#listdiv {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: left;
+}
+.xbutton {
+    padding: 0px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
