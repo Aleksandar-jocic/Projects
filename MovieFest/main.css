@@ -43,3 +43,6 @@ input {
 h1 {
     text-align: center;
 } 
+#select {
+    margin-top: 10px;
+}

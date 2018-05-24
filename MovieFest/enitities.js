@@ -53,7 +53,7 @@ Program.prototype.getData = function () {
     }  else if (this.totalNumMovies === 1)  {
         programRes = this.date + ', ' +  this.totalNumMovies + " movie, " + totalLength + " minutes";
     }  else {
-        programRes = this.date + ' movies and duration TBA';
+        programRes = this.date + ' movies and duration TBA.';
     }
     return programRes;
 }

@@ -93,6 +93,6 @@ document.querySelector('.add-btn').addEventListener('click', function () {
 
 // document.querySelector('.item-delete-btn').addEventListener('click', function () {
 
-//     this.remove(); ?????
+//     this.remove()
     
 // })
