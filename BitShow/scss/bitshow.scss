@@ -1,0 +1,39 @@
+// navbar
+#wrapper {
+    background-color: rgb(28, 21, 58);
+    
+}
+#navbar {
+    background-color: rgb(28, 21, 58);
+    color: white;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    h4 {
+        display: inline-block;
+        font-size: 2em;
+        margin: 0px;
+        margin-left: 4px;
+        padding: 5px;
+    }
+    input {
+        padding: 5px;
+        position: absolute;
+        right: 5px;
+        top: 9px;
+        border-radius: 10px;
+    }
+}
+// BodySector
+
+#bodySector {
+
+    h1 {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    
+}
