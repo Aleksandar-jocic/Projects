@@ -42,12 +42,7 @@
 
 .autocomplete-items {
   position: absolute;
-  top: 40px;
-  left: 1067px;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  width: 155px;
-  border-radius: 10px; }
+  top: 30px;
+  left: 150px; }
 
 /*# sourceMappingURL=bitshow.css.map */

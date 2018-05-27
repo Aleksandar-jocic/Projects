@@ -1,4 +1,4 @@
-var MainMod = (function (UImod, dataMOD) {
+var MainMod = (function (UIMod, dataMOD) {
 
     // var textTrigger = document.querySelector('#textInput');
 
@@ -7,21 +7,21 @@ var MainMod = (function (UImod, dataMOD) {
     //     var key = e.which || e.keyCode;
     //     if (key === 13) {
 
-          
-          
-          
+
+
+
     //         var dataCarrierOnMain = function (dataCarrier) {
     //             dataMOD.dataCarrierToMain(UImod.dataCarrier);
     //         }
-            
 
 
-            
+
+
     //     }
     // })
 
-    dataMOD.dataCarrierOnData(function(shows){
-        UImod.dataCarrier(shows);
+    var dataInterceptor = dataMOD.dataCarrierOnData(function (shows) {
+        UIMod.dataCarrier(shows);
     })
 
-})(UImod, dataMOD);
+})(UIMod, dataMOD);
