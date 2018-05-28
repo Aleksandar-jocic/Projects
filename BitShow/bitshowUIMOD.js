@@ -18,14 +18,14 @@ var UIMod = (function () {
             var BobTheBuilder = '<div class="showCard">';
 
             BobTheBuilder += '<img src="' + img + '" alt="' + name + '">';
-            BobTheBuilder += '<h4 class = "showName">' + name + '</h4>';
+            BobTheBuilder += '<a href="./showInfo.html?id=' + data[i].id + '" target="_blank"><h4 class = "showName">' + name + '</h4></a>';
             BobTheBuilder += '</div>';
 
             document.querySelector(UISelectors.contentListArea).innerHTML += BobTheBuilder;
 
         }
 
-        //my experimental shit
+        //list suggestion
 
         var textValue = document.querySelector(UISelectors.textSelector);
 
@@ -73,7 +73,7 @@ var UIMod = (function () {
 
       
 
-        //end of my experimental shit
+        //end of list suggestion
 
     }
 

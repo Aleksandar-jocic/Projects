@@ -11,7 +11,6 @@
     display: inline-block;
     font-size: 2em;
     margin: 0px;
-    margin-left: 4px;
     padding: 5px; }
   #navbar input {
     padding: 5px;
@@ -49,5 +48,18 @@
   border: 1px solid black;
   width: 155px;
   border-radius: 10px; }
+
+img {
+  width: 400px;
+  height: 600px; }
+
+#append-info {
+  position: relative;
+  width: 65%;
+  margin: 0 auto; }
+  #append-info .seasonList {
+    display: inline-block;
+    position: absolute;
+    left: 420px; }
 
 /*# sourceMappingURL=bitshow.css.map */
