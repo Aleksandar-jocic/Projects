@@ -1,21 +1,32 @@
 var infoMainMOD = (function(infoUImod, dataMOD) {
 
-    var locationOne = window.location.search;
+    $(document).ready(function(){
+
+        var locationOne = window.location.search;
 
 
-    var res = locationOne.split('=');
-
-    var idDetails = res[1];
-
-
-    var dataForInfoMain = dataMOD.getSingleShow(idDetails, function(details) {
-
-        infoUImod.dataBuilder(details);
+        var res = locationOne.split('=');
+    
+        var idDetails = res[1];
+    
+    
+        var dataForInfoMain = dataMOD.getSingleShow(idDetails, function(details) {
+    
+            infoUImod.dataBuilder(details);
+        })
+    
+        var seasonData = dataMOD.getSeason(idDetails, function(seasonDetails) {
+    
+            infoUImod.seasonBuilder(seasonDetails)
+        })
+    
+        var castData = dataMOD.getCast(idDetails, function(castDetails) {
+    
+            infoUImod.castBuilder(castDetails)
+        })
     })
-
-    var seasonData = dataMOD.getSeason(idDetails, function(seasonDetails) {
-        infoUImod.seasonBuilder(seasonDetails)
-    })
+    
+    
 
 
 })(infoUImod, dataMOD)

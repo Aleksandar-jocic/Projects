@@ -12,7 +12,7 @@ var UIMod = (function () {
 
         for (var i = 0; i < 50; i++) {
 
-            var img = data[i].image.medium;
+            var img = data[i].image.original;
             var name = data[i].name;
 
             var BobTheBuilder = '<div class="showCard">';
@@ -69,12 +69,7 @@ var UIMod = (function () {
             }
         }
 
-        var hFourTrigger = document.getElementsByClassName('showName');
-
-      
-
         //end of list suggestion
-
     }
 
 

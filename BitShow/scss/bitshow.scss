@@ -1,14 +1,17 @@
 $mainColor: rgb(28, 21, 58);
+$textColor: white;
 
 
 // navbar
+
+
 #wrapper {
-    background-color:$mainColor;
-    
+    background-color: $mainColor;
 }
+
 #navbar {
-    background-color:$mainColor;
-    color: white;
+    background-color: $mainColor;
+    color: $textColor;
     position: relative;
     width: 65%;
     margin: 0 auto;
@@ -26,8 +29,8 @@ $mainColor: rgb(28, 21, 58);
         border-radius: 10px;
     }
 }
-// BodySector
 
+// BodySector
 #bodySector {
     width: 65%;
     margin: 0 auto;
@@ -37,9 +40,8 @@ $mainColor: rgb(28, 21, 58);
         text-align: center;
         margin-top: 10px;
     }
-
-    
 }
+
 .showCard {
     display: inline-block;
     width: 31%;
@@ -58,26 +60,38 @@ $mainColor: rgb(28, 21, 58);
     position: absolute;
     top: 40px;
     left: 1067px;
-    background-color: white;
+    background-color: $textColor;
     color: black;
     border: 1px solid black;
     width: 155px;
-    border-radius: 10px;  
+    border-radius: 10px;
 }
 
-img{
+img {
     width: 400px;
     height: 600px;
 }
 
 #append-info {
-position: relative;
+    position: relative;
     width: 65%;
     margin: 0 auto;
     .seasonList {
         display: inline-block;
         position: absolute;
         left: 420px;
-        
     }
+    .castList {
+        display: inline-block;
+        position: absolute;
+        left: 420px;
+        top: 350px;
+       
+    }
+}
+#foot {
+    background-color: $mainColor;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
 }

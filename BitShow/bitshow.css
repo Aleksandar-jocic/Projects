@@ -61,5 +61,16 @@ img {
     display: inline-block;
     position: absolute;
     left: 420px; }
+  #append-info .castList {
+    display: inline-block;
+    position: absolute;
+    left: 420px;
+    top: 350px; }
+
+#foot {
+  background-color: #1c153a;
+  color: white;
+  text-align: center;
+  padding: 20px 0px; }
 
 /*# sourceMappingURL=bitshow.css.map */
