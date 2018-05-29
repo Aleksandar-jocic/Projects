@@ -1,46 +1,81 @@
-var dataMOD = (function () {
+class DataMOD {
 
+    dataCarrierOnData() {
 
+        const URL = 'http://api.tvmaze.com/shows';
 
-    var dataCarrierOnData = function (dataCarrierOnMain) {
+        return fetch(URL).then(function (data) {
 
-        var URL = 'http://api.tvmaze.com/shows';        
+            return data.json()
 
-        $.get(URL).done(dataCarrierOnMain);
-        
+        }).then(function (json) {
+
+            return json;
+        });
+
     }
 
-    var getSingleShow = function (id, singleShowHandler) {
+    getListData(data) {
 
-        var URL = 'http://api.tvmaze.com/shows/' + id; 
+        const URL = 'http://api.tvmaze.com/shows';
 
-        $.get(URL).done(singleShowHandler);
-        
+        fetch(URL).then(function (dataList) {
+
+            return dataList.json()
+
+        }).then(function (jsonList) {
+
+            data(jsonList);
+
+        })
     }
-    
-    var getSeason = function (id, singleShowSeasonHandler) {
 
-        var URL = 'http://api.tvmaze.com/shows/' + id + '/seasons' ;        
+    getSingleShow(id, singleShowHandler) {
 
-        $.get(URL).done(singleShowSeasonHandler);
-        
+        const URL = 'http://api.tvmaze.com/shows/' + id;
+
+        fetch(URL).then(function (singleShowData) {
+
+            return singleShowData.json()
+
+        }).then(function (jsonSingleData) {
+
+            singleShowHandler(jsonSingleData)
+            
+        })
+
     }
 
-    var getCast = function (id, singleShowCastHandler) {
+    getSeason(id, singleShowSeasonHandler) {
 
-        var URL = 'http://api.tvmaze.com/shows/' + id + '/cast' ;
+      const URL = 'http://api.tvmaze.com/shows/' + id + '/seasons';
 
-        $.get(URL).done(singleShowCastHandler)
-    }    
+      fetch(URL).then(function(seasonHandler){
 
-    return {
-        dataCarrierOnData: dataCarrierOnData,
-        getSingleShow: getSingleShow,
-        getSeason: getSeason,
-        getCast: getCast
+          return seasonHandler.json();
+
+      }).then(function(seasonHandlerJson){
+
+        singleShowSeasonHandler(seasonHandlerJson);
+
+      })
+
     }
-})();
 
+    getCast(id, singleShowCastHandler) {
 
+        const URL = 'http://api.tvmaze.com/shows/' + id + '/cast';
 
+        fetch(URL).then(function(castDetails){
+
+            return castDetails.json();
+
+        }).then(function(castDetailsJson){
+
+            singleShowCastHandler(castDetailsJson);
+        })
+    }
+}
+
+export default DataMOD
 

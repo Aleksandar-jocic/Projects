@@ -1,11 +1,29 @@
-var MainMod = (function (UIMod, dataMOD) {
+import UIMod from './bitshowUIMOD.js';
+import DataMOD from './bitshowDATAMOD.js';
 
-    $(document).ready(function () {
+class MainMod {
 
-        var dataInterceptor = dataMOD.dataCarrierOnData(function (shows) {
+    init() {
 
-            UIMod.dataCarrier(shows);
+        $(document).ready(function () {
+
+            var data = new DataMOD();
+            let UI = new UIMod();
+
+            let dataInterceptor = data.dataCarrierOnData();
+            dataInterceptor.then(function (shows) {
+
+                UI.dataCarrier(shows);
+            })
+
+            let dataInterceptorList = data.getListData(function (list) {
+
+                UI.listBuilder(list);
+            })
         })
-    })
+    }
 
-})(UIMod, dataMOD);
+}
+
+var program = new MainMod;
+program.init();

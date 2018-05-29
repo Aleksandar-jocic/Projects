@@ -1,32 +1,43 @@
-var infoMainMOD = (function(infoUImod, dataMOD) {
+import InfoUIMod from './infoUImod.js'
+import DataMOD from './bitshowDATAMOD.js'
 
-    $(document).ready(function(){
-
-        var locationOne = window.location.search;
+class infoMainMod {
 
 
-        var res = locationOne.split('=');
-    
-        var idDetails = res[1];
-    
-    
-        var dataForInfoMain = dataMOD.getSingleShow(idDetails, function(details) {
-    
-            infoUImod.dataBuilder(details);
+    init() {
+
+        $(document).ready(function () {
+
+
+            let infoUI = new InfoUIMod();
+            let data = new DataMOD();
+
+            let locationOne = window.location.search;
+
+
+            let res = locationOne.split('=');
+
+            let idDetails = res[1];
+
+
+            let dataForInfoMain = data.getSingleShow(idDetails, function (details) {
+
+                infoUI.dataBuilder(details);
+            })
+
+            let seasonData = data.getSeason(idDetails, function (seasonDetails) {
+
+                infoUI.seasonBuilder(seasonDetails)
+            })
+
+            let castData = data.getCast(idDetails, function (castDetails) {
+
+                infoUI.castBuilder(castDetails)
+            })
         })
-    
-        var seasonData = dataMOD.getSeason(idDetails, function(seasonDetails) {
-    
-            infoUImod.seasonBuilder(seasonDetails)
-        })
-    
-        var castData = dataMOD.getCast(idDetails, function(castDetails) {
-    
-            infoUImod.castBuilder(castDetails)
-        })
-    })
-    
-    
+    }
+}
 
 
-})(infoUImod, dataMOD)
+let program = new infoMainMod()
+program.init();

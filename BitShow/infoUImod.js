@@ -1,6 +1,6 @@
-var infoUImod = (function () {
+class InfoUIMod {
 
-    var dataBuilder = function (singleShow) {
+    dataBuilder (singleShow) {
 
         var div = document.querySelector('#append-info');
 
@@ -21,7 +21,7 @@ var infoUImod = (function () {
         div.innerHTML = BobTheBuilder;
     }
 
-    var seasonBuilder = function (seasonDetails) {
+    seasonBuilder (seasonDetails) {
 
         var counter = 0;
         var BobTheBuilder = '<div class="seasonList">';
@@ -44,7 +44,7 @@ var infoUImod = (function () {
 
         $('#append-info > img').after(BobTheBuilder)
     }
-    var castBuilder = function (castDetails) {
+    castBuilder (castDetails) {
 
         var counter = 0;
         var BobTheBuilder = '<div class="castList">';
@@ -67,9 +67,6 @@ var infoUImod = (function () {
         $('.seasonList').after(BobTheBuilder);
     }
 
-    return {
-        dataBuilder: dataBuilder,
-        seasonBuilder: seasonBuilder,
-        castBuilder: castBuilder
-    }
-})();
+}
+
+export default InfoUIMod

@@ -34,7 +34,9 @@
   margin: 5px;
   border: 1px solid gray; }
   .showCard img {
-    width: 100%; }
+    width: 100%;
+    height: 500px;
+  }
   .showCard h4 {
     color: #1168eb;
     margin: 15px 0px 15px 15px; }
