@@ -1,0 +1,15 @@
+{
+  "name": "clientserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json": "^9.0.6",
+    "lorem-ipsum": "^1.0.4"
+  }
+}
