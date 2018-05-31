@@ -2,18 +2,34 @@ class DataMOD {
 
     dataCarrierOnData() {
 
-        const URL = 'http://api.tvmaze.com/shows';
+        let data = localStorage.getItem('shows');
 
-        return fetch(URL).then(function (data) {
+        if (data === null) {
 
-            return data.json()
+            const URL = 'http://api.tvmaze.com/shows';
 
-        }).then(function (json) {
+            return fetch(URL).then(function (data) {
 
-            return json;
-        });
+                return data.json()
+
+            }).then(function (json) {
+
+                localStorage.setItem('shows', JSON.stringify(json));
+
+                return json;
+
+            });
+        } else {
+
+            let promise = Promise.resolve(JSON.parse(data));
+
+            return promise;
+
+        }
 
     }
+
+
 
     getListData(data) {
 
@@ -41,24 +57,30 @@ class DataMOD {
         }).then(function (jsonSingleData) {
 
             singleShowHandler(jsonSingleData)
-            
+
         })
 
     }
 
     getSeason(id, singleShowSeasonHandler) {
 
-      const URL = 'http://api.tvmaze.com/shows/' + id + '/seasons';
 
-      fetch(URL).then(function(seasonHandler){
 
-          return seasonHandler.json();
+        const URL = 'http://api.tvmaze.com/shows/' + id + '/seasons';
 
-      }).then(function(seasonHandlerJson){
+        fetch(URL).then(function (seasonHandler) {
 
-        singleShowSeasonHandler(seasonHandlerJson);
+            return seasonHandler.json();
 
-      })
+        }).then(function (seasonHandlerJson) {
+
+            localStorage.setItem('season', JSON.stringify(seasonHandlerJson));
+
+            singleShowSeasonHandler(seasonHandlerJson);
+
+        })
+
+
 
     }
 
@@ -66,11 +88,11 @@ class DataMOD {
 
         const URL = 'http://api.tvmaze.com/shows/' + id + '/cast';
 
-        fetch(URL).then(function(castDetails){
+        fetch(URL).then(function (castDetails) {
 
             return castDetails.json();
 
-        }).then(function(castDetailsJson){
+        }).then(function (castDetailsJson) {
 
             singleShowCastHandler(castDetailsJson);
         })

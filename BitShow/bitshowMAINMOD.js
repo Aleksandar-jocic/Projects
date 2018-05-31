@@ -10,6 +10,8 @@ class MainMod {
             var data = new DataMOD();
             let UI = new UIMod();
 
+
+
             let dataInterceptor = data.dataCarrierOnData();
             dataInterceptor.then(function (shows) {
 
