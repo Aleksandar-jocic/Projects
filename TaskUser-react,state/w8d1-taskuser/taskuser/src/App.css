@@ -1,0 +1,48 @@
+.personSection {
+  border: 1px gray solid;
+  width: 31%;
+  margin: 1%;  
+  display: inline-block;
+}
+#root {
+  width: 100%;
+}
+#container {
+  width: 50%;
+  margin: 0 auto; 
+}
+#picDiv {
+    position: relative;
+}
+img {
+  width: 100%;
+}
+#nameFloat{
+  color:white;
+  position: absolute;
+  top: 250px;
+  left: 20px;
+}
+.parDiv {
+  display: inline-block;
+  padding: 15px;
+}
+p {
+  margin: 0px;
+}
+#footer{
+  background-color:salmon;
+  color: white;
+  padding: 12px;
+  width: 100%;
+}
+#footer > p{
+  margin-left: 180px;
+}
+
+#header{
+  background-color: salmon;
+  text-align: center;
+  padding: 1px;
+  color: white;
+}
