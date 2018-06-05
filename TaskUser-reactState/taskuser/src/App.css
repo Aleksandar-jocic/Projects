@@ -23,6 +23,34 @@ img {
   top: 250px;
   left: 20px;
 }
+
+/* list */
+#listDiv {
+  padding: 10px;
+  border: 1px solid gray;
+}
+#listDiv > div{
+  margin-left: 15px;
+  display: inline-block;
+
+}
+#listDiv > p {
+
+  display: inline-block;
+
+}
+
+.thumbPics {
+
+  width: 70px;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+
+
+/* end of list */
 .parDiv {
   display: inline-block;
   padding: 15px;
@@ -45,4 +73,19 @@ p {
   text-align: center;
   padding: 1px;
   color: white;
+  position: relative;
+}
+#header > h1 {
+  display: inline-block;
+  width: 300px;
+}
+#header li {
+  display: inline-block;
+  margin: 0px 15px;
+
+}
+#header ul {
+  position: absolute;
+  display: inline-block;
+  top: 15px;
 }

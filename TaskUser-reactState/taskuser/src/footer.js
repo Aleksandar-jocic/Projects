@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-const footer = (
+const Footer = () => (
     <div id="footer">
         <p>(c)  Copyright BIT   </p>
     </div>
 )
 
-export default footer;
+export default Footer;
