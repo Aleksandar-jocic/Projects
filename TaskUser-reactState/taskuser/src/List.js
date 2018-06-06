@@ -6,18 +6,25 @@ const email = (email) => {
     return e
 }
 
-const List = (props) => (
+const List = (props) => {
 
-    <div id="listDiv">
-        <img className="thumbPics" src={props.userData.picture.thumbnail} />
-        <div>
-            <p>{props.userData.name.first}</p>
-            <p>{email(props.userData.email)}</p>
-            <p>{new Date(props.userData.dob).toDateString()}</p>
-        </div>
 
-    </div>
-)
+    //fix it
+    let femaleOrSheMale = props.userData.gender === "female" ? "personSectionFemale" : "personSection";
+    return (
+
+            <div className="listDiv">
+                <img className="thumbPics" src={props.userData.picture.thumbnail} />
+                <div>
+                    <p>{props.userData.name.first}</p>
+                    <p>{email(props.userData.email)}</p>
+                    <p>{new Date(props.userData.dob).toDateString()}</p>
+                </div>
+
+            </div>
+
+    )
+}
 
 export default List;
 

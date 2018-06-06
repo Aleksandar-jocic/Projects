@@ -20,21 +20,21 @@ img {
 #nameFloat{
   color:white;
   position: absolute;
-  top: 250px;
+  top: 200px;
   left: 20px;
 }
 
 /* list */
-#listDiv {
+.listDiv {
   padding: 10px;
   border: 1px solid gray;
 }
-#listDiv > div{
+.listDiv > div{
   margin-left: 15px;
   display: inline-block;
 
 }
-#listDiv > p {
+.listDiv  p {
 
   display: inline-block;
 
@@ -47,10 +47,38 @@ img {
   display: inline-block;
 
 }
-
-
-
 /* end of list */
+/* Input */
+.inputText {
+
+  width: 100%;
+  padding: 20px 20px 20px 0px;
+}
+.inputText > i {
+
+  margin-right: 5px;
+  width: 3%;
+}
+.inputText > input {
+
+  width: 96%;
+  border: 0px;
+  border-bottom: 1px solid gray;
+
+}
+/* textbox */
+.personSectionFemale {
+  border: 1px gray solid;
+  width: 31%;
+  margin: 1%;  
+  display: inline-block;
+  background-color: pink;
+
+}
+
+
+
+
 .parDiv {
   display: inline-block;
   padding: 15px;

@@ -4,7 +4,7 @@ const GetUser = () => {
 
     const URL = 'https://randomuser.me/api/?results=15';
 
-     return fetch(URL).then((dataList) => {
+    return fetch(URL).then((dataList) => {
 
         return dataList.json()
 
