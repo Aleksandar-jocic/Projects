@@ -64,9 +64,9 @@ class App extends React.Component {
       <div id='container'>
         <div><Header handler={this.handleHeaderClick} view={this.state.currentView} refresh={this.refreshPage} /></div>
 
-<Switch>
-    <Route exact path='/' component={}>
-</Switch>
+{/* <Switch> */}
+    {/* <Route exact path='/' component={}> */}
+{/* </Switch> */}
 
         <div><Search inputHandler={this.inputHandler} /></div>
 

@@ -10,17 +10,16 @@ const List = (props) => {
 
 
     //fix it
-    let femaleOrSheMale = props.userData.gender === "female" ? "personSectionFemale" : "personSection";
+    let femaleOrSheMale = props.userData.gender === "female" ? "listDivRed" : "listDiv";
     return (
 
-            <div className="listDiv">
-                <img className="thumbPics" src={props.userData.picture.thumbnail} />
+            <div className={femaleOrSheMale}>
+                <img src={props.userData.picture.thumbnail} />
                 <div>
                     <p>{props.userData.name.first}</p>
                     <p>{email(props.userData.email)}</p>
                     <p>{new Date(props.userData.dob).toDateString()}</p>
                 </div>
-
             </div>
 
     )

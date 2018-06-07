@@ -34,18 +34,31 @@ img {
   display: inline-block;
 
 }
-.listDiv  p {
 
-  display: inline-block;
-
-}
-
-.thumbPics {
+.listDiv > img {
 
   width: 70px;
   border-radius: 50%;
   display: inline-block;
+}
 
+/* RED */
+.listDivRed {
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: pink;
+}
+.listDivRed > div{
+  margin-left: 15px;
+  display: inline-block;
+
+}
+
+.listDivRed > img {
+
+  width: 70px;
+  border-radius: 50%;
+  display: inline-block;
 }
 /* end of list */
 /* Input */
