@@ -34,3 +34,34 @@
 #home > h1 {
   text-align: center;
 }
+
+/*                         SINGLEPOST                  */
+
+#SinglePost {
+  width: 80%;
+  margin: 0 auto;  
+  text-align: center;
+  
+}
+
+#singlePost > h4 {
+
+  text-align: left;
+}
+/*                         AUTHORS                  */
+
+#authors {
+  width: 80%;
+  margin: 0 auto; 
+}
+#authors > h1 {
+  text-align: center;
+}
+
+/*                         SINGLEAUTHOR                  */
+
+#singleAuthor {
+
+  width: 80%;
+  margin: 0 auto; 
+}

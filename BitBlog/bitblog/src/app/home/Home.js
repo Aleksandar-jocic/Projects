@@ -14,12 +14,11 @@ class Home extends React.Component {
     }
 
     acquirePosts = () => {
-        PostData.getPost().then((posts) => {
-            console.log(posts);
-            
+        PostData.getPosts().then((postsData) => {
+       
 
             this.setState({
-                posts: posts
+                posts: postsData
             })
         })
 
@@ -41,11 +40,9 @@ class Home extends React.Component {
                 {this.state.posts.map(post => (
 
                     <div>
-
-
                         <div>
                             <div>
-                                <h1><Link to='/SinglePost/'{...post.id} >{post.title}</Link></h1>
+                                <h1><Link to={`/SinglePost/${post.id}`}>{post.title}</Link></h1>
                                 <p>{post.content}</p>
                             </div>
                             <hr />

@@ -68,7 +68,7 @@ class App extends React.Component {
     {/* <Route exact path='/' component={}> */}
 {/* </Switch> */}
 
-        <div><Search inputHandler={this.inputHandler} /></div>
+        {/* <div><Search inputHandler={this.inputHandler} /></div> */}
 
         <div><Content view={this.state.currentView} users={this.state.users} 
         inputText={this.state.inputValue}/></div>

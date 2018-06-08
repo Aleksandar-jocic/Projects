@@ -10,7 +10,10 @@ import Footer from './partials/Footer';
 import Home from './home/Home';
 import Author from './authors/Authors';
 import About from './about/AboutPage';
+
+
 import SinglePostPage from './home/SinglePostPage';
+import SingleAuthor from './authors/SingleAuthor';
 
 
 
@@ -20,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <div><Header /></div>
-
+        
         <Switch>
 
           <Route exact path='/' component={Home} />
@@ -28,7 +31,10 @@ class App extends Component {
           <Route  path='/SinglePost/:id' component={SinglePostPage} />
           
           <Route  path='/Author' component={Author} />
-          <Route  path='/About' component={About} />          
+          <Route  path='/singleAuthor/:userId' component={SingleAuthor} />
+
+          <Route  path='/About' component={About} />  
+
 
         </Switch>
 

@@ -1,30 +1,50 @@
 import React from 'react';
+import PostData from '../../services/data';
+import { Link } from "react-router-dom";
+
 
 class Author extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            users: []
+        }
+    }
+
+    acquireUsers() {
+
+        PostData.getUsers().then((usersData) => {
+            console.log(usersData);
+
+            this.setState({
+                users: usersData
+            })
+
+        })
+    }
+    componentDidMount() {
+
+        this.acquireUsers();
+    }
+
+
     render() {
         return (
-            <div>
+            <div id="authors">
 
-                <h1>Authors</h1>
+                <h1>{`AUTHORS (${this.state.users.length})`}</h1>
 
-                <div>
-                    <h1>Authors</h1>
-                    <p>Authors</p>
-                </div>
-                <div>
-                    <h1>Authors</h1>
-                    <p>Authors</p>
-                </div>
-                <div>
-                    <h1>Authors</h1>
-                    <p>Authors</p>
-                </div>
+                {this.state.users.map(user => (
+
+                    <div>
+                        <h3><Link to={`/singleAuthor/${user.id}`}>{`${user.name} ( )`}</Link></h3>
+
+                    </div>
+
+                ))}
 
             </div>
-
-
-
         )
     }
 }
