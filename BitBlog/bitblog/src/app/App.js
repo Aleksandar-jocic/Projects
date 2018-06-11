@@ -15,7 +15,7 @@ import About from './about/AboutPage';
 import SinglePostPage from './home/SinglePostPage';
 import SingleAuthor from './authors/SingleAuthor';
 
-
+import New from './New/New'
 
 
 class App extends Component {
@@ -35,6 +35,7 @@ class App extends Component {
 
           <Route  path='/About' component={About} />  
 
+          <Route  path='/posts/new' component={New} />  
 
         </Switch>
 

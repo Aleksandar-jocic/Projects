@@ -44,7 +44,6 @@ class PostData {
 
     getSingleUser(userId) {
 
-
         return fetch(`${urlMain}users/${userId}`).then((response) => {
 
             return response.json()
@@ -62,6 +61,22 @@ class PostData {
             return response.json()
         }).then((postById) => {
             return postById
+        })
+    }
+
+
+    uploadingNewPostToServer(titleValue, textValue) {
+
+        fetch(`${urlMain}posts`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                title: titleValue,
+                text: textValue,
+            })
         })
     }
 }

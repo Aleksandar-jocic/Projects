@@ -16,7 +16,18 @@
   top: 14px;
   right: 60px;
 }
-/*                         FOOTER                  */
+#newPostLink {
+
+  position: absolute;
+  width: 160px;
+  right: 860px
+
+}
+
+a {
+  text-decoration: none;
+}
+/*                         FOOTER                      */
 
 #footer {
   width: 100%;
@@ -24,8 +35,8 @@
   color: white;
   padding: 15px;
   text-align: center;  
-}
-/*                         HOME                  */
+} 
+/*                          HOME                       */
 
 #home {
   width: 80%;
@@ -48,7 +59,7 @@
 
   text-align: left;
 }
-/*                         AUTHORS                  */
+/*                         AUTHORS                      */
 
 #authors {
   width: 80%;
@@ -64,4 +75,27 @@
 
   width: 80%;
   margin: 0 auto; 
+}
+
+/*                         NEWPOST                        */
+
+#newpost{
+
+  width: 80%;
+  margin: 0 auto; 
+}
+#newpost > h2 {
+  text-align: center;
+}
+
+#newpost textarea {
+  width: 450px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+#buttonsDiv > input {
+
+  margin-bottom: 20px;
+  margin-right: 20px;
+
 }

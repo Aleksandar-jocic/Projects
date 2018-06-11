@@ -8,7 +8,8 @@ class Author extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: []
+            users: [],
+            postsByUserId: []
         }
     }
 
@@ -23,11 +24,13 @@ class Author extends React.Component {
 
         })
     }
+
     componentDidMount() {
 
         this.acquireUsers();
     }
 
+  
 
     render() {
         return (
@@ -38,7 +41,8 @@ class Author extends React.Component {
                 {this.state.users.map(user => (
 
                     <div>
-                        <h3><Link to={`/singleAuthor/${user.id}`}>{`${user.name} ( )`}</Link></h3>
+
+                        <h3><Link to={`/singleAuthor/${user.id}`}>{`${user.name} (10 - posts)`}</Link></h3>
 
                     </div>
 

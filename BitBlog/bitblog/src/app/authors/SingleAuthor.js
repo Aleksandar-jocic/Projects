@@ -25,9 +25,7 @@ class SingleAuthor extends React.Component {
     componentDidMount() {
         this.acquireSingleUser()
 
-    }
-
-    
+    }   
 
 
 

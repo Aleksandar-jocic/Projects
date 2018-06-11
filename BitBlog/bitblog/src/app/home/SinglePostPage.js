@@ -19,7 +19,6 @@ class SinglePost extends React.Component {
     }
 
 
-
     acquireSinglePost(id) {
 
         PostData.getSinglePost(id).then(singlePostObj => {
